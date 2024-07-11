@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 openai = "*"
+langchain = "*"
+langchain-community = "*"
+langchain-openai = "*"
+duckduckgo-search = "*"
+wikipedia = "*"
 
 [dev-packages]
 
