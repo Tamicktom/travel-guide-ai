@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9f03e0fdd31741e9e5713a87281d49a68dc3a6020d1696d9e32985367450c91b"
+            "sha256": "f4cc1616b8889ac8b563681d6bbbf39b2d0a050767e15f7f3168e16e44fff294"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -490,11 +490,11 @@
         },
         "langchain-core": {
             "hashes": [
-                "sha256:a5d8b436639b6aa0955f6db287beb4030c46a8e85951ba3873739c4d47645ee1",
-                "sha256:b9f52003bfda464975413751737c7e6781781398ba14d9aa6c604046d6fc0c6f"
+                "sha256:68dd6fbdd8d704e124ee14c39d0b0dcf38a47bb32234328b63ad2e98385b1c80",
+                "sha256:cc03083e059bff86ca3e6ba60097f91d7765a929edd04eb226bb20c208447caf"
             ],
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==0.2.13"
+            "version": "==0.2.16"
         },
         "langchain-openai": {
             "hashes": [
@@ -512,6 +512,15 @@
             ],
             "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
             "version": "==0.2.2"
+        },
+        "langchainhub": {
+            "hashes": [
+                "sha256:499fa8958233071f35750987f325005d16241bebd455163955b607c195c37f25",
+                "sha256:b3cbb5b2d7d6f9c3f89748bcc74424d8030ed4ebca58b5f44e0b6d9f111e33eb"
+            ],
+            "index": "pypi",
+            "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
+            "version": "==0.1.20"
         },
         "langsmith": {
             "hashes": [
@@ -1184,6 +1193,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==4.66.4"
+        },
+        "types-requests": {
+            "hashes": [
+                "sha256:97bac6b54b5bd4cf91d407e62f0932a74821bc2211f22116d9ee1dd643826caf",
+                "sha256:ed5e8a412fcc39159d6319385c009d642845f250c63902718f605cd90faade31"
+            ],
+            "markers": "python_version >= '3.8'",
+            "version": "==2.32.0.20240622"
         },
         "typing-extensions": {
             "hashes": [
