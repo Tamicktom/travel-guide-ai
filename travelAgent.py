@@ -1,4 +1,3 @@
-import os
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_community.agent_toolkits.load_tools import load_tools
 from langchain.agents import create_react_agent, AgentExecutor
@@ -16,10 +15,10 @@ from langchain_core.runnables import RunnableSequence
 
 llm = ChatOpenAI(model="gpt-3.5-turbo")
 
-query = """
-Vou viajar para Londres em agosto de 2024.
-Quero que faça para um roteiro de viagem para mim com eventos que irão ocorrer na data da viagem e com o preço de passagem de São Paulo para Londres.
-"""
+# query = """
+# Vou viajar para Londres em agosto de 2024.
+# Quero que faça para um roteiro de viagem para mim com eventos que irão ocorrer na data da viagem e com o preço de passagem de São Paulo para Londres.
+# """
 
 
 def researchAgent(query, llm):
@@ -27,7 +26,7 @@ def researchAgent(query, llm):
     prompt = hub.pull("hwchase17/react")
     agent = create_react_agent(llm, tools, prompt)
     agent_executor = AgentExecutor(
-        agent=agent, tools=tools, prompt=prompt, verbose=True
+        agent=agent, tools=tools, prompt=prompt
     )
     webContext = agent_executor.invoke({"input": query})
     return webContext["output"]
@@ -59,7 +58,7 @@ def loadData():
 def getRelevantDocs(query):
     retriever = loadData()
     relevant_documents = retriever.invoke(query)
-    print(relevant_documents)
+    # print(relevant_documents)
     return relevant_documents
 
 
@@ -96,4 +95,12 @@ def getResponse(query, llm):
     return response
 
 
-print(getResponse(query, llm).content)
+# print(getResponse(query, llm).content)
+
+def lambda_handler(event, context):
+    query = event.get("question")
+    response = getResponse(query, llm).content
+    return {
+        "statusCode": 200,
+        "body": response,
+    }
