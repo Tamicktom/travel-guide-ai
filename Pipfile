@@ -11,6 +11,8 @@ langchain-openai = "*"
 duckduckgo-search = "*"
 wikipedia = "*"
 langchainhub = "*"
+chroma = "*"
+chromadb = "*"
 
 [dev-packages]
 
